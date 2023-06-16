@@ -18,6 +18,7 @@ b++;
 }
 while
 (d <= 'Z') {
+putchar (d);
 d++;
 }
 putchar('\n');
