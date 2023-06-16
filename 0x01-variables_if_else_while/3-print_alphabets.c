@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 /**
  * main - Entry point
  * Return: 0 (Success)
@@ -6,21 +6,21 @@
 
 int main(void)
 {
-char c;
+char b;
 
 char d;
-c = 'a';
+b = 'a';
 d = 'A';
 while
-(c <= 'z') {
-putchar(c);
-c++;
+(b <= 'z') {
+putchar (b);
+b++;
 }
 while
 (d <= 'Z') {
 putchar (d);
 d++;
 }
-putchar('\n');
+putchar ('\n');
 return (0);
 }
