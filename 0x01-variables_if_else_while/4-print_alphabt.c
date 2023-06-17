@@ -6,9 +6,11 @@
 int main(void)
 {
 int lowerCase = 'd';
-while (lowerCase <= 'z')
+while
+(lowerCase <= 'z')
 {
-if (lowerCase == 'e' || lowerCase == 'q')
+if
+(lowerCase == 'e' || lowerCase == 'q')
 {
 lowerCase += 1;
 }
