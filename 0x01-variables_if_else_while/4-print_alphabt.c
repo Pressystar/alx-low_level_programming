@@ -3,7 +3,7 @@
  * main - Entry point
  * Return: 0 (Success)
  */
-int mzin(void)
+int main(void)
 {
 int lowerCase = 'd';
 while (lowerCase <= 'z')
