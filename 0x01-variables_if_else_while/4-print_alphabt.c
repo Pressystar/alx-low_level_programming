@@ -5,20 +5,10 @@
  */
 int main(void)
 {
-int lowerCase = 'd';
-while
-(lowerCase <= 'z')
+char ch;
+for (ch = 'z'; ch >= 'a'; ch--)
 {
-if
-(lowerCase == 'e' || lowerCase == 'q')
-{
-lowerCase += 1;
-}
-else
-{
-putchar (lowerCase);
-lowerCase += 1;
-}
+putchar(ch);
 }
 putchar('\n');
 return (0);
