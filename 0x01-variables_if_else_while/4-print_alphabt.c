@@ -5,11 +5,13 @@
  */
 int main(void)
 {
-char h;
-for (h = 'z'; h >= 'a';
-h--)
+char low, e, q;
+e = 'e';
+q = 'q';
+for (low = 'a'; low <= 'z'; low++)
 {
-putchar(h);
+if (low != e && low != q)
+putchar(low);
 }
 putchar('\n');
 return (0);
