@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
  * main - Entry point
  * Return: 0 (Success)
  */
 int main(void)
 {
-
-int g;
-
-for (g = '0'; g <= '9'); g++;
-
-putchar(g);
+int w;
+for (w = 0; w <= 9; w++)
+{
+putchar(n + 48);
+}
 putchar('\n');
 return (0);
 }
