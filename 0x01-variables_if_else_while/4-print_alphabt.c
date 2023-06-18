@@ -5,14 +5,17 @@
  */
 int main(void)
 {
-char low, e, q;
-e = 'e';
-q = 'q';
-for (low = 'a'; low <= 'z'; low++)
+int w = 97
+while (w <= 122)
 {
-if (low != e && low != q)
-putchar(low);
+if (w == 101 || w == 113)
+{
+w++;
+continue;
 }
-putchar('\n');
+putchar(w);
+w++;
+}
+putchar('\n')
 return (0);
 }
