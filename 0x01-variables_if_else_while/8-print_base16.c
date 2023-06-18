@@ -6,12 +6,17 @@
  */
 int main(void)
 {
-int b;
-char low;
-for (b = 0 ; b <= '9'; b++)
-putchar(b);
-for (low = 'a';
-putchar('\n');
+int u;
+int v;
 
+for (u = 48; u <= 57; u++)
+{
+putchar(u);
+}
+for (v = 97; v <= 107; v++)
+{
+putchar(v);
+}
+putchar('\n');
 return (0);
 }
