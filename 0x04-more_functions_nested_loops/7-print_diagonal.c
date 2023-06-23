@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 /**
  * print_diagonal - draws a diagonal line on the terminal
  * @n: number o times the character \ should be printed
@@ -21,6 +21,7 @@ _putchar('\\');
 else if (j < i)
 _putchar(' ');
 }
+_putchar('\n');
 }
 }
 }
