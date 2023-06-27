@@ -11,7 +11,7 @@ int main(void)
 int pass[100];
 int j, sum, n;
 
-sum =    0;
+sum = 0;
 
 srand(time(NULL));
 for (j = 0; j < 100; j++)
@@ -23,7 +23,7 @@ if ((2772 - sum) -'0' < 78)
 {
 n = 2772 - sum - '0';
 sum += n;
-putchar(n + '0')'
+putchar(n + '0');
 break;
 }
 }
