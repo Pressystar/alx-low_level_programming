@@ -20,13 +20,13 @@ while (s[c] >= 48 && s[c] <= 57)
 {
 iso = 1;
 ni = (ni * 10) + (s[c] - '0');
-c++
+c++;
 }
 if (iso == 1)
 {
 break;
 }
-c++
+c++;
 }
 ni *= min;
 return (ni);
