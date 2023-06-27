@@ -1,5 +1,5 @@
 #include"main.h"
-#include <stdio.h>
+#include<stdio.h>
 /**
  * print_array - Write a function that prints n
  * @a: array
