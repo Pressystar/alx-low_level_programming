@@ -2,7 +2,7 @@
 
 /**
  * print_number - Write a function that prints an integer.
- * @n: integer
+ * @n: integer parans
  * Return: 0
  */
 
@@ -14,7 +14,7 @@ n1 = n;
 
 if (n < 0)
 {
-_putchar('_');
+_putchar('-');
 n1 = -n;
 }
 if (n1 / 10 != 0)
