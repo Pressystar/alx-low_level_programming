@@ -13,7 +13,7 @@ int p;
 while (*s)
 {
 for (p = 0; accept[p]; p++)
-		{
+{
 if (*s == accept[p])
 {
 n++;
