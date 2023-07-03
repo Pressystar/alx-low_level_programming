@@ -19,7 +19,7 @@ if (*s == accept[p])
 n++;
 break;
 }
-else if (accept[p + 1] == '0')
+else if (accept[p + 1] == '\0')
 return (n);
 }
 s++;
