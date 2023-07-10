@@ -1,7 +1,6 @@
 #include"main.h"
-#include<stdlib.h>
 #include<stdio.h>
-
+#include<stdlib.h>
 
 /**
  * main - Entry point
@@ -11,14 +10,18 @@
  */
 int main(int argc, char *argv[])
 {
-int x, y;
-if (argc == 1)
+int num1 = 0, num2 = 0;
+
+if (argc == 3)
 {
-x = atoi(argv[1]);
-y = atoi(argv[2]);
-printf("%d\n", x *y);
-return (0);
+num1 = atoi(argv[1]);
+num2 = atoi(argv[2]);
+printf("%d\n", num1 * num2);
 }
+else
+{
 printf("Error\n");
 return (1);
+}
+return (0);
 }
