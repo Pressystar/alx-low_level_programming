@@ -54,7 +54,7 @@ for (b = 1; str[a + b] != ' ' && str[a + b]; b++)
 ;
 b++;
 w[wc] = (char *)malloc(b *sizeof(char));
-b++;
+b--;
 if (w[wc] ==  NULL)
 {
 for (c = 0; c < wc; c++)
