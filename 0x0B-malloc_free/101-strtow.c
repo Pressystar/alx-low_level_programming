@@ -64,7 +64,7 @@ free(w);
 return (NULL);
 }
 for (d = 0; d < b; d++)
-w[wc][d] = str[a = d];
+w[wc][d] = str[a + d];
 w[wc][d] = '\0';
 wc++;
 a += b;
