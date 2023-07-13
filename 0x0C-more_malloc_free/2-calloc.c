@@ -22,12 +22,6 @@ x = malloc(b);
 if (x == NULL)
 return (NULL);
 
-b = nmemb * size;
-x = malloc(b);
-
-if (x == NULL)
-return (NULL);
-
 while (a < b)
 {
 x[a] = 0;
