@@ -6,7 +6,7 @@
  * _calloc - Entry  point
  * @nmemb: input value
  * @size: input value
- * Return: input value
+ * Return: NULL
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
