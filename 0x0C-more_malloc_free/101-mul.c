@@ -131,7 +131,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 {
 int num, units = 0;
 
-while(*(final_prod + 1))
+while (*(final_prod + 1))
 final_prod++;
 while (*(next_prod + 1))
 next_prod++;
@@ -164,7 +164,7 @@ if (units)
 * @argc: array or agruments
 * Return: 0
 */
-int main(int argc, char*argv[])
+int main(int argc, char *argv[])
 {
 char *final_prod, *next_prod;
 int size, index, digit, zeroes = 0;
