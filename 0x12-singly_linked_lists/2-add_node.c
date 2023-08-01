@@ -1,7 +1,7 @@
 #include "lists.h"
 #include<stdio.h>
 #include<stdlib.h>
->
+#include<string.h>
 /**
  * add_node - Write a program that adds a new node
  * @head: pointer points to the first node
@@ -20,7 +20,7 @@ return (NULL);
 
 new->len = length;
 new->str  = strdup(str);
-new->next = *head;
-*head = new;
+new->next = head;
+head = new;
 return (new);
 }
