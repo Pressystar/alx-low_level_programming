@@ -24,6 +24,7 @@ return (NULL);
 new->str = strdup(str);
 new->len = length;
 new->next = NULL;
+if (*head == NULL)
 {
 *head = new;
 return (new);
