@@ -20,7 +20,7 @@ return (NULL);
 
 new->len = length;
 new->str  = strdup(str);
-new->next = head;
-head = new;
+new->next = *head;
+*head = new;
 return (new);
 }
