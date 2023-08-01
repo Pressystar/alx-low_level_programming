@@ -19,7 +19,7 @@ while (str[length])
 length++;
 
 new = malloc(sizeof(list_t));
-if (new == NULL)
+if (!new)
 return (NULL);
 new->str = strdup(str);
 new->len = length;
