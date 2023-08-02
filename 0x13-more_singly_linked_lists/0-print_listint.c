@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * print_listint - Write a function that prints all the elements
@@ -8,14 +7,13 @@
  */
 size_t print_listint(const listint_t *h)
 {
-size_t sum = 0;
+size_t p = 0;
 
 while (h)
 {
-sum++;
+p++;
 printf("%d\n", h->n);
-
 h = h->next;
 }
-return (sum);
+return (p);
 }
