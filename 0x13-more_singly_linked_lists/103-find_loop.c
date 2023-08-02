@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * find_listint_loop - Write a function that finds the loop in a linked list.
@@ -10,6 +11,7 @@ listint_t *find_listint_loop(listint_t *h)
 listint_t *table, *chair;
 
 if (h == NULL || h->next == NULL)
+
 return (NULL);
 table = h->next;
 chair = (h->next)->next;
@@ -24,6 +26,7 @@ while (table != chair)
 table = table->next;
 chair = chair->next;
 }
+
 return (table);
 }
 table = table->next;
