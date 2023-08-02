@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint - Write a function that prints all the elements
@@ -11,8 +12,9 @@ size_t sum = 0;
 
 while (h)
 {
-printf("%d\n", h->n);
 sum++;
+printf("%d\n", h->n);
+
 h = h->next;
 }
 return (sum);
