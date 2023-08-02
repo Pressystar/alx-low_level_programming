@@ -31,7 +31,7 @@ nodes++;
 table = table->next;
 chair = chair->next;
 }
-table = table->next
+table = table->next;
 while (table != chair)
 {
 nodes++;
