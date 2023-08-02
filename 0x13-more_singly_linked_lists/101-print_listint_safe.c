@@ -29,6 +29,13 @@ while (table != chair)
 {
 nodes++;
 table = table->next;
+chair = chair->next;
+}
+table = table->next
+while (table != chair)
+{
+nodes++;
+table = table->next;
 }
 return (nodes);
 }
@@ -64,7 +71,7 @@ for (idx = 0; idx < nodes; idx++)
 printf("[%p] %d\n", (void *)head, head->n);
 head = head->next;
 }
-printf("->[%p] %d\n", (void *)head, head->n);
+printf("-> [%p] %d\n", (void *)head, head->n);
 }
 return (nodes);
 }
