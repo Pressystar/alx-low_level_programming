@@ -64,7 +64,7 @@ for (idx = 0; idx < nodes; idx++)
 printf("[%p] %d\n", (void *)head, head->n);
 head = head->next;
 }
-printf("-> [%p] %d\n", (void *)head, head->n);
+printf("->[%p] %d\n", (void *)head, head->n);
 }
 return (nodes);
 }
