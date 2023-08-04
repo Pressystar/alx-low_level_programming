@@ -13,7 +13,6 @@ unsigned int dec_v = 0;
 
 if (!b)
 return (0);
-
 for (f = 0; b[f]; f++)
 {
 if (b[f] < '0' || b[f] > '1')
