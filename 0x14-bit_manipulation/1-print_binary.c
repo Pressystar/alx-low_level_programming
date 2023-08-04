@@ -3,16 +3,15 @@
 /**
 * print_binary - Write a function that prints the binary representation
 * @n: The numbers to print
+* Return: 0
 */
 void print_binary(unsigned long int n)
 {
-int p, count = 0;
-unsigned long int curr;
+int p = sizeof(n) * 8, count = 0;
 
-for (p = 63; p >= 0; p--)
-curr = n >> p;
-{
-if (curr & 1)
+while (count)
+
+if (n & 1UL << --bit)
 {
 _putchar('1');
 count++;
