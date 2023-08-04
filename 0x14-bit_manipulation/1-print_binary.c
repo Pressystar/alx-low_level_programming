@@ -7,9 +7,9 @@
 */
 void print_binary(unsigned long int n)
 {
-int p = sizeof(n) * 8, count = 0;
+int bit = sizeof(n) * 8, count = 0;
 
-while (p)
+while (bit)
 {
 
 if (n & 1UL << --bit)
