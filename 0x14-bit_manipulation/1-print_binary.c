@@ -6,7 +6,7 @@
 */
 void print_binary(unsigned long int n)
 {
-int p, cnt = 0;
+int p, count = 0;
 unsigned long int curr;
 
 for (p = 63; p >= 0; p--)
@@ -15,11 +15,11 @@ curr = n >> p;
 if (curr & 1)
 {
 _putchar('1');
-cnt++;
+count++;
 }
-else if (cnt)
+else if (count)
 _putchar('0');
 }
-if (!cnt)
+if (!count)
 _putchar('0');
 }
