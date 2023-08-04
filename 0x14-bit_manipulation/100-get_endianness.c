@@ -6,7 +6,11 @@
  */
 int get_endianness(void)
 {
-unsigned long int  p = 1;
+unsigned long int  bit = 1;
+char *end = (char *)&bit;
 
-return (*(char *)p);
+if (*end == 1)
+return (1);
+
+return (0);
 }
