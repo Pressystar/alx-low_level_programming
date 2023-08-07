@@ -22,7 +22,7 @@ for (count = 0; text_content[count];)
 count++;
 }
 p = open(filename, O_WRONLY | O_APPEND);
-w = write(p, text_content, count)
+w = write(p, text_content, count);
 
 if (p == -1 || w == -1)
 return (-1);
