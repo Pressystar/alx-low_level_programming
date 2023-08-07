@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
  * create_file - Create a function that creates a file.
@@ -21,7 +23,7 @@ count++;
 fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 w  = write(fd, text_content, count);
 
-if (fd == -1 || w == -)
+if (fd == -1 || w == -1)
 return (-1);
 close(fd);
 return (1);
