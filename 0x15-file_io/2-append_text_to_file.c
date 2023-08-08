@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
  * append_text_to_file - Write a function
