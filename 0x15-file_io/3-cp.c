@@ -30,10 +30,10 @@ return (buffer);
  */
 void close_file(int fd)
 {
-int g;
-g = close(fd);
+int c;
+c = close(fd);
 
-if (g == -1)
+if (c == -1)
 {
 dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
 exit(100);
