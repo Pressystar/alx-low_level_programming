@@ -37,7 +37,7 @@ c = close(fd);
 
 if (c == -1)
 {
-dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 exit(100);
 }
 }
@@ -63,7 +63,6 @@ if (argc != 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
-
 buffer = create_buffer(argv[2]);
 from = open(argv[1], O_RDONLY);
 r = read(from, buffer, 1024);
