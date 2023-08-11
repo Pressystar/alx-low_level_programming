@@ -17,7 +17,7 @@ void print_osabi(unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry,
 unsigned char *e_ident);
-void close_elf(unsigned char *e_ident);
+void close_elf(int elf);
 
 /**
  * check_elf - write a function that checs file
@@ -58,9 +58,11 @@ printf("%02x", e_ident[index]);
 
 if (index == EI_NIDENT - 1)
 printf("\n");
-else printf(" ");
+else
+printf(" ");
 }
 }
+
 /**
  * print_class - Entry point
  * @e_ident: ELF class
@@ -81,7 +83,8 @@ case ELFCLASS64:
 printf("ELF64\n");
 break;
 default:
-printf("<unknown: %x>\n", e_ident([EI_CLASS]);
+printf("<unknown: %x>\n",
+e_ident[EI_CLASS]);
 }
 }
 /**
@@ -92,7 +95,7 @@ void print_data(unsigned char *e_ident)
 {
 printf(" Data: ");
 
-switch(e_ident[EI_DATA])
+switch (e_ident[EI_DATA])
 {
 case ELFDATANONE:
 printf("none\n");
@@ -104,7 +107,8 @@ case ELFDATA2MSB:
 printf("2's complement, big endian\n");
 break;
 default:
-printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+printf("<unknown: %x>\n",
+e_ident[EI_CLASS]);
 }
 }
 /**
@@ -113,8 +117,8 @@ printf("<unknown: %x>\n", e_ident[EI_CLASS]);
  */
 void print_version(unsigned char *e_ident)
 {
-printf(" Version: ");
-e_iden([EI_VERSION]);
+printf(" Version: %d",
+e_ident[EI_VERSION]);
 switch (e_ident[EI_VERSION])
 {
 case EV_CURRENT:
@@ -125,6 +129,7 @@ printf("\n");
 break;
 }
 }
+
 /**
  * print_osabi - Entry point
  * @e_ident: pointer to ELF version
@@ -150,6 +155,9 @@ break;
 case ELFOSABI_SOLARIS:
 printf("UNIX - Solaris\n");
 break;
+case ELFOSABI_IRIX:
+printf("UNIX - IRIX\n");
+break;
 case ELFOSABI_FREEBSD:
 printf("UNIX - FreeBSD\n");
 break;
@@ -163,7 +171,8 @@ case ELFOSABI_STANDALONE:
 printf("Standalone App\n");
 break;
 default:
-printf("<unknown: %x>\n", e_ident[EI_OSABI]);
+printf("<unknown: %x>\n",
+e_ident[EI_OSABI]);
 }
 }
 /**
@@ -175,6 +184,7 @@ void print_abi(unsigned char *e_ident)
 printf(" ABI Version: %d\n",
 e_ident[EI_ABIVERSION]);
 }
+
 /**
  * print_type - Entry point
  * @e_ident: pointer to ELF type
@@ -184,12 +194,14 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 e_type >>= 8;
-printf(" Type ");
+
+printf(" Type: ");
 
 switch (e_type)
+
 {
 case ET_NONE:
- 	printf("NONE (None)\n");
+printf("NONE (None)\n");
 break;
 case ET_REL:
 printf("REL (Relocatable file)/n");
@@ -235,7 +247,8 @@ void close_elf(int elf)
 {
 if (close(elf) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", elf), exit(98);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", elf);
+exit(98);
 }
 }
 /**
@@ -247,13 +260,15 @@ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", elf), exit(98);
  */
 int main(int __attribute__((__unused__))argc, char *argv[])
 {
-ELF64_Ehdr *header;
+Elf64_Ehdr *header;
 int o, r;
-p = open(argv[1], O_RDONLY);
+
+o = open(argv[1], O_RDONLY);
 
 if (o == -1)
 {
-dprintf(STDERR_FILENO, "Error:Can't read file %s\n", argv[1]), exit(98);
+dprintf(STDERR_FILENO, "Error:Can't read file %s\n", argv[1]);
+exit(98);
 }
 header = malloc(sizeof(Elf64_Ehdr));
 if (header == NULL)
@@ -262,7 +277,7 @@ close_elf(o);
 dprintf(STDERR_FILENO, "Error:can't read file %s\n", argv[1]);
 exit(98);
 }
-r = read(p, header, sizeof(Elf64_Ehdr));
+r = read(o, header, sizeof(Elf64_Ehdr));
 if (r == -1)
 {
 free(header);
@@ -278,7 +293,7 @@ print_data(header->e_ident);
 print_version(header->e_ident);
 print_osabi(header->e_ident);
 print_abi(header->e_ident);
-print_type(header->e_ type, header->e_ident);
+print_type(header->e_type, header->e_ident);
 print_entry(header->e_entry, header->e_ident);
 free(header);
 close_elf(-o);
