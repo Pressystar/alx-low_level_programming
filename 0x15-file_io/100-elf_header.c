@@ -282,7 +282,7 @@ if (r == -1)
 {
 free(header);
 close_elf(o);
-dprintf(STDERR_FILENO, "Error:'%s': No such file\n", argv[1]);
+dprintf(STDERR_FILENO, "Error: '%s': No such file\n", argv[1]);
 exit(98);
 }
 check_elf(header->e_ident);
@@ -296,6 +296,6 @@ print_abi(header->e_ident);
 print_type(header->e_type, header->e_ident);
 print_entry(header->e_entry, header->e_ident);
 free(header);
-close_elf(-o);
+close_elf(o);
 return (0);
 }
