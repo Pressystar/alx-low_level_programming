@@ -51,7 +51,7 @@ exit(100);
  * Description: if the argumentcount is ncorrect - exit code 97.
  * if file_from does not exiist or cannot be read - exit code 98.
  * if file_to cannot be created / written - exit code 99.
- * if file_to or file_from cannot be closed - exit code 00.
+ * if file_to or file_from cannot be closed - exit code 100.
  */
 int main(int argc, char *argv[])
 {
@@ -60,7 +60,7 @@ char *buffer;
 
 if (argc != 3)
 {
-dprintf(STDERR_FILENO, "Usage: cp file_from fle_to\n");
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
 
